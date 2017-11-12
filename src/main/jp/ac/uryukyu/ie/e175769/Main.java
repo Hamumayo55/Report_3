@@ -5,7 +5,7 @@ package jp.ac.uryukyu.ie.e175769;
  */
 public class Main {
     public static void main(String[] args){
-        Hero hero = new Hero("naltoma", 10, 5);
+        Hero hero = new Hero("yogiねこ", 10, 5);
         Enemy enemy = new Enemy("スライム", 6, 3);
 
         System.out.printf("%s vs. %s\n", hero.getName(), enemy.getName());
