@@ -21,7 +21,7 @@ public class LivingThing {
      * getterメソッドと同等。生死をboolean表現しているためメソッド名をisDead()とした。
      * @return boolean
      */
-    public boolean getisDead(){
+    public boolean getDead(){
         return  dead;
     }
 
@@ -35,7 +35,7 @@ public class LivingThing {
      * @param opponent 攻撃対象
      */
     public void attack(LivingThing opponent){
-        if( isDead() == false ) {
+        if( getDead() == false ) {
             int damage = (int) (Math.random() * attack);
             System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, opponent.getName(), damage);
             opponent.wounded(damage);
@@ -76,11 +76,7 @@ public class LivingThing {
         this.attack = attack;
     }
 
-    public void setisDead(boolean dead){
+    public void setDead(boolean dead){
         this.dead = dead;
-    }
-
-    public boolean isDead() {
-        return dead;
     }
 }
