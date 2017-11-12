@@ -14,9 +14,9 @@ public class Enemy extends LivingThing {
         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, maximumHP, attack);
     }
     public void wounded(int damage){
-        hitPoint -= damage;
-        if( hitPoint < 0 ) {
-            setDead(true);
+        setHitPoint(getHitPoint() -damage);
+        if( getHitPoint() < 0 ) {
+            setisDead(true);
             System.out.printf("モンスター%sは倒れた。\n", getName());
         }
     }

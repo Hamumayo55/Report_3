@@ -2,7 +2,7 @@ package jp.ac.uryukyu.ie.e175769;
 
 public class LivingThing {
     private String name;
-    int hitPoint;
+    private int hitPoint;
     private int attack;
     private boolean dead;
     public LivingThing(String name,int hitPoint,int attack){
@@ -21,7 +21,7 @@ public class LivingThing {
      * getterメソッドと同等。生死をboolean表現しているためメソッド名をisDead()とした。
      * @return boolean
      */
-    public boolean isDead(){
+    public boolean getisDead(){
         return  dead;
     }
 
@@ -72,10 +72,15 @@ public class LivingThing {
     }
 
     public void setAttack(int attack){
+
         this.attack = attack;
     }
 
-    public void setDead(boolean dead){
+    public void setisDead(boolean dead){
         this.dead = dead;
+    }
+
+    public boolean isDead() {
+        return dead;
     }
 }
